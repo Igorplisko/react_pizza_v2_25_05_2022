@@ -1,4 +1,4 @@
-import './App.css';
+import './scss/app.scss';
 
 import React from 'react';
 
@@ -441,8 +441,5 @@ function App() {
     </div>
   );
 }
-
-//?</div>
-//! Today is May 25, 2022 and it's the 91 day of the war!
 
 export default App;

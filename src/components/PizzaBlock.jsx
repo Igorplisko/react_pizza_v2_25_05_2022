@@ -1,26 +1,36 @@
-function PizzaBlock(props) {
+import { useState } from "react";
+
+function PizzaBlock({title, price}) {
+
+  const [pizzaCount , setPizzaCount] = useState(0)
+
+  const onClickAdd = () => {
+    setPizzaCount (pizzaCount + 1 )
+  }
+
+  
   return (
-    <div class="pizza-block">
+    <div className="pizza-block">
       <img
-        class="pizza-block__image"
+        className="pizza-block__image"
         src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
         alt="Pizza"
       />
-      <h4 class="pizza-block__title">{props.title}</h4>
-      <div class="pizza-block__selector">
+      <h4 className="pizza-block__title">{title}</h4>
+      <div className="pizza-block__selector">
         <ul>
-          <li class="active">Subtle</li>
+          <li className="active">Subtle</li>
           <li>Traditional</li>
         </ul>
         <ul>
-          <li class="active">26 cm.</li>
+          <li className="active">26 cm.</li>
           <li>30 cm.</li>
           <li>40 cm.</li>
         </ul>
       </div>
-      <div class="pizza-block__bottom">
-        <div class="pizza-block__price">from {props.price} ₽</div>
-        <div class="button button--outline button--add">
+      <div className="pizza-block__bottom">
+        <div className="pizza-block__price">from {price} ₽</div>
+        <button onClick={onClickAdd} className="button button--outline button--add">
           <svg
             width="12"
             height="12"
@@ -34,14 +44,18 @@ function PizzaBlock(props) {
             />
           </svg>
           <span>Add</span>
-          <i>2</i>
-        </div>
+          <i>{pizzaCount}</i>
+        </button>
       </div>
     </div>
   );
 }
 
 export default PizzaBlock;
+
+
+
+
 
 // {
 //   "pizzas": [

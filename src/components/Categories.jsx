@@ -10,6 +10,8 @@ function Categories() {
         <li>Closed</li>
       </ul>
     </div>
+
+    // start 30.08.2022
   );
 }
 

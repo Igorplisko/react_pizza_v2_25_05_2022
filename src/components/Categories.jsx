@@ -11,7 +11,7 @@ function Categories() {
       </ul>
     </div>
 
-    // start 30.08.2022
+    // start 05.09.2022
   );
 }
 

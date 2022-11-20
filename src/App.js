@@ -15,7 +15,7 @@ function App() {
       <div className="content">
         <div className="container">
           <div className="content__top">
-            {/* <Categories /> */}
+            <Categories />
             <Sort />
           </div>
           <h2 className="content__title">All pizzas</h2>
